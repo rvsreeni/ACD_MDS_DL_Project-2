@@ -38,32 +38,7 @@ y_train = np_utils.to_categorical(y_train)
 y_test = np_utils.to_categorical(y_test)
 num_classes = y_test.shape[1]
 
-# Create simple CNN model with two convolutional layers followed by max pooling and a 
-# flattening out of the network to fully connected layers to make predictions.
-# Convolutional input layer, 32 feature maps with a size of 3×3, a rectifier activation 
-# function and a weight constraint of max norm set to 3.
-# Dropout set to 20%.
-# Convolutional layer, 32 feature maps with a size of 3×3, a rectifier activation function 
-# and a weight constraint of max norm set to 3.
-# Max Pool layer with size 2×2.
-# Flatten layer.
-# Fully connected layer with 512 units and a rectifier activation function.
-# Dropout set to 50%.
-# Fully connected output layer with 10 units and a softmax activation function.
-# A logarithmic loss function is used with the stochastic gradient descent optimization 
-# algorithm configured with a large momentum & weight decay start with a learning rate of 0.01.
-
-#model = Sequential()
-#model.add(Conv2D(32, (3, 3), input_shape=(3, 32, 32), padding='same', activation='relu', kernel_constraint=maxnorm(3)))
-#model.add(Dropout(0.2))
-#model.add(Conv2D(32, (3, 3), activation='relu', padding='same', kernel_constraint=maxnorm(3)))
-#model.add(MaxPooling2D(pool_size=(2, 2)))
-#model.add(Flatten())
-#model.add(Dense(512, activation='relu', kernel_constraint=maxnorm(3)))
-#model.add(Dropout(0.5))
-#model.add(Dense(num_classes, activation='softmax'))
-
-# Create deep CNN model with below architecture
+# Create deep CNN model with below architecture -
 # Convolutional input layer, 32 feature maps with a size of 3×3 and a rectifier activation function.
 # Dropout layer at 20%.
 # Convolutional layer, 32 feature maps with a size of 3×3 and a rectifier activation function.
