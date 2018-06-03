@@ -63,48 +63,6 @@ model.add(Dense(512, activation='relu', kernel_constraint=maxnorm(3)))
 model.add(Dropout(0.5))
 model.add(Dense(num_classes, activation='softmax'))
 
-# Create deep CNN model with below architecture
-# Convolutional input layer, 32 feature maps with a size of 3×3 and a rectifier activation function.
-# Dropout layer at 20%.
-# Convolutional layer, 32 feature maps with a size of 3×3 and a rectifier activation function.
-# Max Pool layer with size 2×2.
-# Convolutional layer, 64 feature maps with a size of 3×3 and a rectifier activation function.
-# Dropout layer at 20%.
-# Convolutional layer, 64 feature maps with a size of 3×3 and a rectifier activation function.
-# Max Pool layer with size 2×2.
-# Convolutional layer, 128 feature maps with a size of 3×3 and a rectifier activation function.
-# Dropout layer at 20%.
-# Convolutional layer,128 feature maps with a size of 3×3 and a rectifier activation function.
-# Max Pool layer with size 2×2.
-# Flatten layer.
-# Dropout layer at 20%.
-# Fully connected layer with 1024 units and a rectifier activation function.
-# Dropout layer at 20%.
-# Fully connected layer with 512 units and a rectifier activation function.
-# Dropout layer at 20%.
-# Fully connected output layer with 10 units and a softmax activation function.
-
-#model = Sequential()
-#model.add(Conv2D(32, (3, 3), input_shape=(3, 32, 32), activation='relu', padding='same'))
-#model.add(Dropout(0.2))
-#model.add(Conv2D(32, (3, 3), activation='relu', padding='same'))
-#model.add(MaxPooling2D(pool_size=(2, 2)))
-#model.add(Conv2D(64, (3, 3), activation='relu', padding='same'))
-#model.add(Dropout(0.2))
-#model.add(Conv2D(64, (3, 3), activation='relu', padding='same'))
-#model.add(MaxPooling2D(pool_size=(2, 2)))
-#model.add(Conv2D(128, (3, 3), activation='relu', padding='same'))
-#model.add(Dropout(0.2))
-#model.add(Conv2D(128, (3, 3), activation='relu', padding='same'))
-#model.add(MaxPooling2D(pool_size=(2, 2)))
-#model.add(Flatten())
-#model.add(Dropout(0.2))
-#model.add(Dense(1024, activation='relu', kernel_constraint=maxnorm(3)))
-#model.add(Dropout(0.2))
-#model.add(Dense(512, activation='relu', kernel_constraint=maxnorm(3)))
-#model.add(Dropout(0.2))
-#model.add(Dense(num_classes, activation='softmax'))
-
 # Compile model
 epochs = 10
 lrate = 0.01
